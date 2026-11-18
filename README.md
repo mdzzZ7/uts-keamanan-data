@@ -1,12 +1,9 @@
 👨‍💻 Informasi Pengembang
 Nama: Ahmad Yusuf Abdhillah
-
 Program Studi: Teknik Informatika — Semester 5
-
 Institusi: Universitas Muhammadiyah Sukabumi
-
 Mata Kuliah: Keamanan Data (Project Ujian Tengah Semester)
-
+---
 
 <div align="center">
 
@@ -63,6 +60,8 @@ Aplikasi ini mengombinasikan keunggulan algoritma simetris dan asimetris:
  • Diagnosa   ──► Enkripsi AES-256-CBC                                                            dalam bentuk Ciphertext
        │                                                                                        • Fitur Uji Dekripsi (Live)
        └──────────────────────────────► Simpan ke MySQL (`db_klinik_medika`) ◄───────────────────────────────┘
+---
+
 🗂️ Struktur Proyek & Database
 Struktur Direktori
 Plaintext
