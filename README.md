@@ -1,8 +1,13 @@
 👨‍💻 Informasi Pengembang
+
 Nama: Ahmad Yusuf Abdhillah
+
 Program Studi: Teknik Informatika — Semester 5
+
 Institusi: Universitas Muhammadiyah Sukabumi
+
 Mata Kuliah: Keamanan Data (Project Ujian Tengah Semester)
+
 ---
 
 <div align="center">
