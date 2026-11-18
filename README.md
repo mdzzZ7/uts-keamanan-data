@@ -1,15 +1,3 @@
-👨‍💻 Informasi Pengembang
-
-Nama: Ahmad Yusuf Abdhillah
-
-Program Studi: Teknik Informatika — Semester 5
-
-Institusi: Universitas Muhammadiyah Sukabumi
-
-Mata Kuliah: Keamanan Data (Project Ujian Tengah Semester)
-
----
-
 <div align="center">
 
 # 🏥 Klinik Medika Nusantara
@@ -65,50 +53,5 @@ Aplikasi ini mengombinasikan keunggulan algoritma simetris dan asimetris:
  • Diagnosa   ──► Enkripsi AES-256-CBC                                                            dalam bentuk Ciphertext
        │                                                                                        • Fitur Uji Dekripsi (Live)
        └──────────────────────────────► Simpan ke MySQL (`db_klinik_medika`) ◄───────────────────────────────┘
----
 
-🗂️ Struktur Proyek & Database
-Struktur Direktori
-Plaintext
-si-rekam-medis/
-├── index.php        # Landing page informasi klinik & gerbang login Dual-Key
-├── admin.php        # Dashboard admin (input data auto-encrypt & tabel ciphertext)
-├── config.php       # Koneksi MySQL, auto-seeder kunci, & mesin kriptografi OpenSSL
-├── logout.php       # Penghapusan sesi otorisasi administrator
-├── database.sql     # Skema database db_klinik_medika
-└── README.md        # Dokumentasi proyek
-Skema Database (db_klinik_medika)
-konfigurasi_kunci: Menyimpan public_key RSA-2048 milik server serta token_simetris dan token_asimetris terenkripsi sebagai validator saat admin melakukan login.
 
-rekam_medis: Menyimpan data kunjungan pasien dengan kolom identitas_pasien_rsa (hasil enkripsi asimetris) dan diagnosa_tindakan_aes (hasil enkripsi simetris).
-
-🚀 Cara Menjalankan di Lokal (Laragon)
-Clone atau Unduh Repositori
-Simpan folder proyek ke dalam direktori document root Laragon:
-
-Bash
-C:\laragon\www\si-rekam-medis
-Aktifkan Servis Server
-Buka aplikasi Laragon dan jalankan servis Apache serta MySQL.
-
-Import Database
-
-Buka phpMyAdmin (http://localhost/phpmyadmin).
-
-Buat database baru atau langsung Import file database.sql untuk membentuk database db_klinik_medika.
-
-Akses Aplikasi
-Buka browser dan kunjungi:
-
-Plaintext
-http://localhost/si-rekam-medis
-(Saat pertama kali diakses, sistem otomatis membangkitkan pasangan kunci RSA-2048 dan mengisi 3 data sampel rekam medis terenkripsi).
-
-🧪 Panduan Pengujian (Demo Presentasi)
-Pada bagian Gerbang Masuk Administrator di halaman utama (index.php), klik tombol "Isi Otomatis ke Form Login" pada panel kunci demo (atau masukkan pasangan Kunci Simetris dan RSA Private Key secara manual).
-
-Klik "Autentikasi Kunci & Buka Halaman Admin" untuk masuk ke admin.php.
-
-Tambahkan data rekam medis baru melalui form input, lalu amati bahwa data yang tersimpan dan tampil pada tabel langsung berbentuk Ciphertext (Base64).
-
-Klik tombol "Uji Dekripsi" pada baris data untuk memverifikasi bahwa ciphertext dapat dikembalikan ke bentuk teks asli menggunakan pasangan kunci aktif.
